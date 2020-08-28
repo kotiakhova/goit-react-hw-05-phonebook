@@ -5,6 +5,15 @@
   transform: translateX(0%);
   transition: transform 500ms linear;
 }
+.filter-appear {
+  transform: scale(1, 1);
+  transform-origin: 80px 50%;
+}
+.filter-appear-active {
+  transform: scale(1, 1);
+  transform-origin: 80px 50%;
+  transition: transform 500ms linear;
+}
 .filter-enter {
   transform: scale(0.1, 0.1);
   transform-origin: 80px 50%;
