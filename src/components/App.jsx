@@ -21,7 +21,9 @@ export default class App extends Component {
   componentDidMount() {
     const persistedContacts = localStorage.getItem("contacts");
     persistedContacts &&
-      this.setState({ contacts: JSON.parse(persistedContacts) });
+      this.setState({
+        contacts: JSON.parse(persistedContacts),
+      });
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
@@ -79,22 +81,10 @@ export default class App extends Component {
           contacts={this.state.contacts}
         />
         <h2>Contacts</h2>
-        {/* 
-        {contacts.length > 1 && (
-          <CSSTransition
-            in={true}
-            appear={true}
-            classNames="filter"
-            timeout={500}
-            unmountOnExit
-          >
-            <Filter onHandleFilter={this.handleFilter} />
-          </CSSTransition>
-        )} */}
         {contacts.length > 0 && (
           <CSSTransition
             in={contacts.length > 1 ? true : false}
-            appear={true}
+            appear={false}
             classNames="filter"
             timeout={500}
             unmountOnExit
@@ -102,13 +92,18 @@ export default class App extends Component {
             <Filter onHandleFilter={this.handleFilter} />
           </CSSTransition>
         )}
-
-        {contacts.length > 0 && (
-          <ContactList
-            visibleContacts={visibleContacts}
-            onRemove={this.removeContact}
-          />
-        )}
+        {/* <CSSTransition
+          in={true}
+          appear={true}
+          classNames="contacts"
+          timeout={250}
+          unmountOnExit
+        > */}
+        <ContactList
+          visibleContacts={visibleContacts}
+          onRemove={this.removeContact}
+        />
+        {/* </CSSTransition> */}
       </div>
     );
   }
