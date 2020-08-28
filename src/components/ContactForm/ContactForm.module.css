@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+}
+.errorModal {
+  background-color: red;
+  width: 450px;
+  padding: 15px;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 5px;
+}

@@ -1,0 +1,24 @@
+.ContactList {
+  padding: 0;
+}
+.contactListItem-appear {
+  transform: translateX(-100%);
+}
+.contactListItem-appear-active {
+  transform: translateX(0%);
+  transition: transform 250ms linear;
+}
+.contactListItem-enter {
+  transform: translateX(-100%);
+}
+.contactListItem-enter-active {
+  transform: translateX(0%);
+  transition: transform 250ms linear;
+}
+.contactListItem-exit {
+  transform: translateX(0%);
+}
+.contactListItem-exit-active {
+  transform: translateX(-100%);
+  transition: transform 250ms linear;
+}
