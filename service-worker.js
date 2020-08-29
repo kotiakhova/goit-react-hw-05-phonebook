@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/goit-react-hw-05-phonebook/precache-manifest.c4b2f1d263a23d95b6f3b93d77458504.js"
+  "/goit-react-hw-05-phonebook/precache-manifest.6e22e375ca29ecefd62748d4aef0f7d2.js"
 );
 
 self.addEventListener('message', (event) => {
