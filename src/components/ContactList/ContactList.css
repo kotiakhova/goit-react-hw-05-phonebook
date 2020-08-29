@@ -1,13 +1,13 @@
 .ContactList {
   padding: 0;
 }
-/* .contactListItem-appear {
+.ContactList-appear {
   transform: translateX(0%);
 }
-.contactListItem-appear-active {
+.ContactList-appear-active {
   transform: translateX(0%);
   transition: transform 250ms linear;
-} */
+}
 .contactListItem-enter {
   transform: translateX(-100%);
 }

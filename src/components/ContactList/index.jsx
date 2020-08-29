@@ -17,6 +17,24 @@ export default function ContactList({ visibleContacts, onRemove }) {
           </CSSTransition>
         ))}
       </TransitionGroup>
+      {/* <ul className="ContactList">
+        {visibleContacts.map(({ name, id, number }) => (
+          <CSSTransition
+            in={true}
+            appear={true}
+            key={id}
+            timeout={250}
+            classNames="contactListItem"
+            unmountOnExit
+          >
+            <ContactListItem
+              itemName={name}
+              // itemNumber={number}
+              onRemoveItem={() => onRemove(id)}
+            />
+          </CSSTransition>
+        ))}
+      </ul> */}
     </>
   );
 }
